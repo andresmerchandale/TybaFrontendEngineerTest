@@ -6,16 +6,18 @@ import 'package:testapp/ui/res/app_theme.dart';
 import 'package:testapp/ui/route/dir.dart';
 import 'package:testapp/ui/route/direction.dart';
 
+import 'ui/viewmodels/home_view_model.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initialization(null);
+  //await initialization(null);
   HttpOverrides.global = SecureOptionsHttp();
 
   runApp(const MyApp());
 }
 
 Future initialization(BuildContext? context) async {
-  await Future.delayed(const Duration(seconds: 5));
+  await Future.delayed(const Duration(seconds: 3));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,13 +26,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: const [],
+      providers: [
+        ChangeNotifierProvider(create: (_) => HomeViewModel()),
+      ],
       child: MaterialApp(
         scrollBehavior: CustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         theme: AppTheme().appTheme(),
-        initialRoute: Dir.list,
+        initialRoute: Dir.home,
         onGenerateRoute: Direction.generateRoute,
       ),
     );
