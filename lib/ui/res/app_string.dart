@@ -3,28 +3,17 @@ class AppString {
 
   AppString._init();
 
-  /* auth String */
+  //text string
   final String textAppName = "Tyba";
-  final String textLoginTitle = "Login to Your Account";
-  final String textRegisterTitle = "Create Your Account";
-
-  final String textEmail = "Email";
-  final String textPassword = "Password";
-  final String textRemember = "Remember me";
-  final String textForgotPass = "Forgot Password";
-  final String textSignUp = "Sign up";
-  final String textOrContinue = "- or continue with -";
-
-  final String textAlreadyHaveAnAccount = "Already have an account?";
-
-  final String textSignIn = "Sign In";
-  final String textGoogleSignIn = "Sign in with Google";
-
   final String textWelcome = "Welcome to Tyba";
-
   final String textHomeSub = "The best university information app";
-
   final String textGetStarted = "Go!";
 
+  //ruotes assets
   final String pathHomeImage = "assets/home.png";
+
+  //url services
+  static var universitiesBaseUrl =
+      'https://tyba-assets.s3.amazonaws.com/FE-Engineer-test/universities.json';
+  static var photoBaseUrl = "https://image.tmdb.org/t/p/w500";
 }

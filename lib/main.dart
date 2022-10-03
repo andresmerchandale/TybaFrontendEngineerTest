@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,7 @@ import 'package:testapp/ui/res/app_theme.dart';
 import 'package:testapp/ui/route/dir.dart';
 import 'package:testapp/ui/route/direction.dart';
 
-import 'ui/viewmodels/home_view_model.dart';
+import 'ui/viewmodels/app_view_model.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => HomeViewModel()),
+        ChangeNotifierProvider(create: (_) => AppViewModel()),
       ],
       child: MaterialApp(
         scrollBehavior: CustomScrollBehavior(),

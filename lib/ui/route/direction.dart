@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/ui/route/dir.dart';
+import 'package:testapp/ui/view/list/list_screen.dart';
 
 import '../view/home/home_screen.dart';
 
 class Direction {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      /*case Dir.list:
+      case Dir.list:
         return MaterialPageRoute(
-            builder: (BuildContext context) => const OnboardScreen());*/
+            builder: (BuildContext context) => const ListScreen());
 
       case Dir.home:
         return MaterialPageRoute(

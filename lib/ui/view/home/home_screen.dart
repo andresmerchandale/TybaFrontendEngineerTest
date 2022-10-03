@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
         ),
         ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pushNamed(Dir.home);
+              Navigator.of(context).pushNamed(Dir.list);
             },
             child: SizedBox(
               width: width * .4,
